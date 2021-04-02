@@ -5,12 +5,6 @@ import javax.persistence.*;
 @Entity
 public class Job extends AbstractEntity{
 
-//    @Id
-//    @GeneratedValue
-//    private int id;
-//
-//    private String name;
-
     @ManyToOne
     private Employer employer;
 
@@ -26,15 +20,6 @@ public class Job extends AbstractEntity{
     }
 
     // Getters and setters.
-
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
 
     public Employer getEmployer() {
         return employer;
@@ -53,3 +38,18 @@ public class Job extends AbstractEntity{
     }
 
 }
+
+
+//    @Id
+//    @GeneratedValue
+//    private int id;
+//
+//    private String name;
+
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
