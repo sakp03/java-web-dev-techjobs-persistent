@@ -11,6 +11,7 @@ public class Skill extends AbstractEntity {
     @Max(365)
     private String skill;
 
+
     public Skill() {}
 
     public String getSkill() {

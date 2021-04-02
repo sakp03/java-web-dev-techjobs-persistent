@@ -20,8 +20,8 @@ public class EmployerController {
 
     @GetMapping("")
     public String displayAllEmployers(Model model) {
-        model.addAttribute(employerRepository);
-        return "";
+        model.addAttribute("employers", employerRepository.findAll());
+        return "employers/displayAllEmployers";
     }
 
     @GetMapping("add")
