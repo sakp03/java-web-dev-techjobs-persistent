@@ -2,6 +2,7 @@ package org.launchcode.javawebdevtechjobspersistent.controllers;
 
 import org.launchcode.javawebdevtechjobspersistent.models.Employer;
 import org.launchcode.javawebdevtechjobspersistent.models.Job;
+import org.launchcode.javawebdevtechjobspersistent.models.Skill;
 import org.launchcode.javawebdevtechjobspersistent.models.data.EmployerRepository;
 import org.launchcode.javawebdevtechjobspersistent.models.data.JobRepository;
 import org.launchcode.javawebdevtechjobspersistent.models.data.SkillRepository;
@@ -62,7 +63,7 @@ public class HomeController {
             newJob.setEmployer(employer);
         }
 
-//        List<Skill> optSkill = (List<Skill>) skillRepository.findAllById(skills);
+        List<Skill> optSkill = (List<Skill>) skillRepository.findAllById(skills);
 //        newJob.setSkills(optSkill);
 
         model.addAttribute("job", newJob);
