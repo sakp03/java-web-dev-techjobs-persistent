@@ -15,7 +15,11 @@ public class Skill extends AbstractEntity {
     @ManyToMany(mappedBy = "skills")
     private Job jobs;
 
+    //Constructors
+
     public Skill() {}
+
+    // Getters and setters
 
     public String getDescription() {
         return description;
@@ -23,6 +27,14 @@ public class Skill extends AbstractEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Job getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(Job jobs) {
+        this.jobs = jobs;
     }
 
 }
