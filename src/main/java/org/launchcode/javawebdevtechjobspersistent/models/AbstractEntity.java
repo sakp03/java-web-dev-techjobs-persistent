@@ -16,7 +16,7 @@ public abstract class AbstractEntity {
     private int id;
 
     @NotEmpty
-    @Size(max = 50, message = "Location length must be under 50.")
+    @Size(max = 50, message = "Length of name must be under 50.")
     private String name;
 
     public int getId() {
