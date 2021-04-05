@@ -34,7 +34,8 @@ public class HomeController {
     @RequestMapping("")
     public String index(Model model) {
         model.addAttribute("title", "My Jobs");
-        return "index";
+        model.addAttribute("jobs", jobRepository.findAll());
+        return "list-jobs";
     }
 
     @GetMapping("add")
@@ -76,6 +77,8 @@ public class HomeController {
 
     @GetMapping("view/{jobId}")
     public String displayViewJob(Model model, @PathVariable int jobId) {
+        model.addAttribute("title", jobId);
+        model.addAttribute("jobs", jobRepository.findById(jobId));
         return "view";
     }
 
