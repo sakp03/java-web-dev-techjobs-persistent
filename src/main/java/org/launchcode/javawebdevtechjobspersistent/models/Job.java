@@ -13,6 +13,7 @@ public class Job extends AbstractEntity{
     private Employer employer;
 
     @ManyToMany
+    @JoinColumn
     private List<Skill> skills = new ArrayList<>();
 
     //Constructors
