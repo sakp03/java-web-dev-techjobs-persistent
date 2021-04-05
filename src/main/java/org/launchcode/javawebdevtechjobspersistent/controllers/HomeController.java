@@ -54,6 +54,7 @@ public class HomeController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Job");
+            model.addAttribute("title", "You have an error!");
             return "add";
         }
 
