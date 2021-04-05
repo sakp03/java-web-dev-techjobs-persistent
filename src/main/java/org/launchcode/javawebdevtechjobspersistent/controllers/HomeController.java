@@ -64,7 +64,7 @@ public class HomeController {
         }
 
         List<Skill> optSkill = (List<Skill>) skillRepository.findAllById(skills);
-//        newJob.setSkills(optSkill);
+        newJob.setSkills(optSkill);
 
         model.addAttribute("job", newJob);
 
