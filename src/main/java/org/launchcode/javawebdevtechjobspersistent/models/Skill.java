@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
@@ -13,7 +15,7 @@ public class Skill extends AbstractEntity {
     private String description;
 
     @ManyToMany(mappedBy = "skills")
-    private Job jobs;
+    private List<Job> jobs = new ArrayList<>();
 
     //Constructors
 
@@ -29,11 +31,11 @@ public class Skill extends AbstractEntity {
         this.description = description;
     }
 
-    public Job getJobs() {
+    public List<Job> getJobs() {
         return jobs;
     }
 
-    public void setJobs(Job jobs) {
+    public void setJobs(List<Job> jobs) {
         this.jobs = jobs;
     }
 
