@@ -14,3 +14,9 @@ FROM skill
 LEFT JOIN job_skills ON  skill.id = job_skills.skills_id
 WHERE job_skills.jobs_id = "21"
 ORDER BY name;
+
+SELECT jobs_id, name, description
+FROM skill
+LEFT JOIN job_skills ON  skill.id = job_skills.skills_id
+WHERE job_skills.jobs_id != "null"
+ORDER BY name;
